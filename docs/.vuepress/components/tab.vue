@@ -13,10 +13,10 @@ export default {
   },
   props: {
     title: {
-        type: String,
-        default: "标签",
-    }
-  }
+      type: String,
+      default: "标签",
+    },
+  },
 };
 </script>
 
