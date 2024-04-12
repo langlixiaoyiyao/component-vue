@@ -1,5 +1,5 @@
 {
-  "name": "component-vue-h5",
+  "name": "@yiyao/component-vue-h5",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "^1.9.10"
+    "vuepress": "^1.9.10",
+    "webpack": "^4.47.0"
+  },
+  "dependencies": {
+    "vant": "^2.13.2",
+    "vue": "^2.6.10"
   }
 }
