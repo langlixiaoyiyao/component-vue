@@ -1,5 +1,5 @@
 <template>
-  <van-tab :title="title">
+  <van-tab :title="title" v-bind="componentProps">
     <slot>标签</slot>
   </van-tab>
 </template>
@@ -16,6 +16,10 @@ export default {
       type: String,
       default: "标签",
     },
+    componentProps: {
+      type: Object,
+      default: () => {},
+    }
   },
 };
 </script>

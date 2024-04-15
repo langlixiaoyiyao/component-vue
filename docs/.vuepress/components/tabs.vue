@@ -1,5 +1,5 @@
 <template>
-  <van-tabs v-model="active">
+  <van-tabs v-model="active" v-bind="componentsProps">
     <slot></slot>
   </van-tabs>
 </template>
@@ -13,15 +13,23 @@ export default {
   },
   data() {
     return {
-      active: 1,
+      active: 0,
     };
   },
-  props: ["activeIndex"],
-  watch: {
-    activeIndex: function (newVal, oldVal) {
-      this.active = newVal;
+  props: {
+    activeIndex: {
+      type: Number,
     },
+    componentsProps: {
+      type: Object,
+      default: function() {
+        return {};
+      },
+    }
   },
+  mounted() {
+    this.activeIndex && (this.active = this.activeIndex);
+  }
 };
 </script>
 
