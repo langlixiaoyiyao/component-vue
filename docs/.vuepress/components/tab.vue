@@ -1,5 +1,5 @@
 <template>
-  <van-tab title="标签 1">
+  <van-tab :title="title">
     <slot>标签</slot>
   </van-tab>
 </template>
