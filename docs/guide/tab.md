@@ -1,5 +1,8 @@
 # tab组件
 
+### 说明
+该组件是基于vant ui库的tabs实现的封装。用于移动端
+
 ### 效果   
 <br>
 <tabs :activeIndex="1">
