@@ -4,12 +4,7 @@
 ```js
 Vue.directive('throttle', {
     bind(el, binding) {
-        let cbFn = null;
-        let { time, handler } = (typeof binding.value === 'function' ? {
-            time: 300,
-            handler: binding.value
-        } : binding.value);
-        el.addEventListener(binding.arg, function (e) {
+        el.handler = function (e) {
             e.stopImmediatePropagation();
             if (cbFn) {
                 clearTimeout(cbFn);
@@ -18,7 +13,16 @@ Vue.directive('throttle', {
                 cbFn = null;
                 handler();
             }, time);
-        }, true);
+        }
+        let cbFn = null;
+        let { time, handler } = (typeof binding.value === 'function' ? {
+            time: 300,
+            handler: binding.value
+        } : binding.value);
+        el.addEventListener(binding.arg, el.handler, true);
+    },
+    unbind(el) {
+        el.removeEventListener('click', el.handler);
     }
 })
 ```
