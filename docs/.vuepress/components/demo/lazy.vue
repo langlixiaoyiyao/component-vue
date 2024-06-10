@@ -1,10 +1,12 @@
-## 自定义指令之图片懒加载
+<template>
+  <img src="https://www.wetools.com/imgplaceholder/800x240" alt="" v-lazy>
+</template>
 
-### 定义插件
-```js
+<script>
+import Vue from 'vue';
 const Lazy = {
     install(Vue, options={}){
-        const defaultSrc = options.defaultSrc || 'https://www.wetools.com/imgplaceholder/800x240'
+        const defaultSrc = options.defaultSrc || 'https://img.zcool.cn/community/01114d59941891000000212989593d.gif'
         Vue.directive('lazy', {
             bind(el) {
                 el.ob = Lazy.init(el, defaultSrc);
@@ -30,10 +32,14 @@ const Lazy = {
         return ob;
     },
 }
-Vue.use(Lazy);
-```
+Vue.use(Lazy, {
+    defaultSrc: 'https://img.zcool.cn/community/01114d59941891000000212989593d.gif'
+});
+export default {
 
-### 使用插件
-```html
-<img class="shop_img" :src="imgBaseUrl + item.image_path" v-lazy>
-```
+}
+</script>
+
+<style>
+
+</style>

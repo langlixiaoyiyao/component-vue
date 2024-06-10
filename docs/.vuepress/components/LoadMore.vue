@@ -37,8 +37,8 @@ export default {
     });
     this.observe.observe(this.$refs.loadMoreRef);
   },
-  destroyed() {
-    this.observe.unobserve(this.$ref.loadMoreRef);
+  beforeDestroy() {
+    this.observe.unobserve(this.$refs.loadMoreRef);
   },
 };
 </script>

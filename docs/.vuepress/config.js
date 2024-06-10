@@ -10,6 +10,14 @@ module.exports = {
                 title: '上拉加载更多',
                 path: '../../guide/loadMore.md'
             },
+            {
+                title: 'v-throttle',
+                path: '../../guide/throttle.md'
+            },
+            {
+                title: 'v-lazy',
+                path: '../../guide/lazy.md'
+            }
         ]
     },
     // head: [
