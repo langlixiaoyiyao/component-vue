@@ -17,6 +17,10 @@ module.exports = {
             {
                 title: 'v-lazy',
                 path: '../../guide/lazy.md'
+            },
+            {
+                title: 'v-copy',
+                path: '../../guide/copy.md'
             }
         ]
     },
