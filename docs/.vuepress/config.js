@@ -21,6 +21,10 @@ module.exports = {
             {
                 title: 'v-copy',
                 path: '../../guide/copy.md'
+            },
+            {
+                title: 'qsEllipsis',
+                path: '../../guide/qsEllipsis.md'
             }
         ]
     },
