@@ -25,6 +25,10 @@ module.exports = {
             {
                 title: 'qsEllipsis',
                 path: '../../guide/qsEllipsis.md'
+            },
+            {
+                title: 'tagSelect',
+                path: '../../guide/tagSelect.md'
             }
         ]
     },
