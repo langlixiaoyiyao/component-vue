@@ -15,6 +15,7 @@ export default {
       end: false,
       loading: false,
       observe: null,
+      bottom: null,
     };
   },
   methods: {
@@ -31,7 +32,7 @@ export default {
   },
   mounted() {
     this.observe = new IntersectionObserver((entries) => {
-      if (entries[0].intersectionRect.bottom > 0) {
+      if (entries[0].intersectionRect.bottom > 0 && this.bottom <= 0 && this.bottom !== null) {
         this.loadData();
       }
     });
